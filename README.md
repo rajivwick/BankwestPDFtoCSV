@@ -2,7 +2,7 @@
 
 ## Description
 
-This project contains a Python script and Flask web application for converting Bankwest PDF files into a structured CSV format. The Python script processes transaction data from Bankwest PDFs and outputs a CSV file. The Flask application provides a simple web interface that allows users to specify input parameters for the conversion process.
+This project contains a Python script and Flask web application for converting Bankwest PDF Statements into a structured CSV format. The Python script processes transaction data from Bankwest PDFs and outputs a CSV file. The Flask application provides a simple web interface that allows users to specify input parameters for the conversion process.
 
 ## Features
 
@@ -26,11 +26,11 @@ To run this application, you'll need:
 
 1. Clone this repository:
     ```
-    git clone https://github.com/<your-github-username>/bankwest-pdf-to-csv-converter.git
+    git clone https://github.com/rajivwick/BankwestPDFtoCSV.git
     ```
 2. Navigate to the project directory:
     ```
-    cd bankwest-pdf-to-csv-converter
+    cd BankwestPDFtoCSV
     ```
 3. Install the required Python packages:
     ```
@@ -44,9 +44,10 @@ To run this application, you'll need:
     python app.py
     ```
 2. Open your web browser and navigate to `http://localhost:5000`.
-3. Enter the directories for the PDF and CSV files, and the desired name of the CSV file.
-4. Optionally, modify the list of strings to ignore during processing if there are items within the statement you would like avoid being added to the CSV.
-5. Click `Convert` to start the conversion process.
+3. Save the PDF files in a folder inside the main BankwestPDFtoCSV directory.
+4. Enter the directories for the PDF and CSV files, and the desired name of the CSV file.
+5. Optionally, modify the list of strings to ignore during processing if there are items within the statement you would like avoid being added to the CSV.
+6. Click `Convert` to start the conversion process.
 
 ## Contributing
 

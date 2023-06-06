@@ -120,18 +120,5 @@ def process_directory(pdf_directory, csv_file_path,ignore_list):
     process_multiple_pdfs(pdf_file_paths, csv_file_path, ignore_list)
 
 
-# ignore_list = ['Credit Interest Rates',
-#                     'OPENING BALANCE',
-#                      'CARRIED FORWARD',
-#                      'BROUGHT FORWARD',
-#                      'DEBIT INTEREST',
-#                      'BSB Number',
-#                      'CLOSING BALANCE',
-#                      'Debit Interest Rates 01',
-#                      'Page 1 of'
-#                      ]
 
-# pdf_directory = 'Personal - Jiv'
-# csv_file_path = 'Personal - Jiv/transactions.csv'
-# process_directory(pdf_directory, csv_file_path, ignore_list)
 
