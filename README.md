@@ -26,7 +26,7 @@ To run this application, you'll need:
 
 1. Clone this repository:
     ```
-    git clone https://github.com/<your-github-username>/bankwest-pdf-to-csv-converter.git
+    git clone https://github.com/rajivwick/BankwestPDFtoCSV.git
     ```
 2. Navigate to the project directory:
     ```
