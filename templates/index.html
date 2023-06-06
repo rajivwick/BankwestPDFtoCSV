@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>PDF to CSV Converter</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>PDF to CSV Converter</h1>
+        <div class="row">
+          <div class="col-lg-6">
+            <form action="/convert" method="post">
+        <div class="form-group">
+          <label for="pdf_directory">PDF Directory</label>
+          <input type="text" class="form-control" id="pdf_directory" name="pdf_directory" required>
+        </div>
+        <div class="form-group">
+          <label for="csv_directory">CSV Directory</label>
+          <input type="text" class="form-control" id="csv_directory" name="csv_directory" required>
+        </div>
+        <div class="form-group">
+          <label for="csv_name">CSV Name</label>
+          <input type="text" class="form-control" id="csv_name" name="csv_name" required>
+        </div>
+        <div class="form-group">
+          <label for="ignore_list">Current Ignore List</label>
+          <textarea class="form-control" id="ignore_list" name="ignore_list" readonly>{{ ignore_list | join(', ') }}</textarea>
+        </div>
+        <div class="form-group">
+          <label for="additional_ignore_list">Add more to Ignore List (comma-separated)</label>
+          <input type="text" class="form-control" id="additional_ignore_list" name="additional_ignore_list">
+        </div>
+        <div class="form-group">
+            <label for="remove_ignore_list">Remove from Ignore List (comma-separated)</label>
+            <input type="text" class="form-control" id="remove_ignore_list" name="remove_ignore_list">
+          </div>
+        <button type="submit" class="btn btn-primary">Convert</button>
+      </form>
+    
+</div>
+<div class="col-lg-6">
+  <img src="{{ url_for('static', filename='images/BankwestStatement.jpg')}}" alt="" class="img-fluid">
+</div>
+</div>
+</div>
+</body>
+</html>
+
+
+
+
