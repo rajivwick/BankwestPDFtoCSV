@@ -49,12 +49,12 @@ def parse_transactions(text):
             transaction['Date'] = line
             transaction['Debit'] = ''  # Initialize 'Debit' field
             transaction['Credit'] = ''  # Initialize 'Credit' field
-        elif re.match(r'\$.*', line):  # e.g., '$2.46'
+        elif re.match(r'\$.*', line):  # e.g., '$2.46' or '$2.46DR'
             clean_line = re.sub(r'[^0-9.]', '', line)
             try:
-                print(line)
                 current_balance = float(clean_line)
-                print(current_balance)
+                if 'DR' in line:
+                    current_balance *= -1
                 transaction['TempBalance'] = current_balance
             except ValueError:
                 # skip lines that cannot be converted to float
